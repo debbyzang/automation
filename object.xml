@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<对象>
+    <首页>
+        <搜索分类><type>id</type><value>category</value></搜索分类>
+        <搜索输入框><type>id</type><value>keyword</value></搜索输入框>
+        <搜索按钮><type>name</type><value>imageField</value></搜索按钮>
+        <留言板><type>xpath</type><value>//a[@href='message.php']</value></留言板>
+        <精品推荐-tab签><type>xpath</type><value>//div[@id='itemBest']/h2/a</value></精品推荐-tab签>
+        <精品推荐-价格><type>xpath</type><value>//div[@id='show_best_area']//font</value></精品推荐-价格>
+        <精品推荐-图片><type>xpath</type><value>//div[@id='show_best_area']//img[@class='goodsimg']</value></精品推荐-图片>
+        <商品列表><type>xpath</type><value>//div[@class='clearfix goodsBox']/div[@class='goodsItem']</value></商品列表>
+    </首页>
+    
+    <登录页>
+        <用户名> <type>name</type> <value>username</value> </用户名>
+        <密码>   <type>name</type> <value>password</value> </密码>
+        <立即登录>  <type>name</type> <value>submit</value> </立即登录>
+    </登录页>
+    
+    <留言板>
+        <电子邮件地址> <type>name</type> <value>user_email</value> </电子邮件地址>
+        <留言类型-投诉> <type>xpath</type> <value>//input[@name='msg_type' and @value='1']</value> </留言类型-投诉>
+        <主题> <type>name</type> <value>msg_title</value> </主题>
+        <留言内容> <type>name</type> <value>msg_content</value> </留言内容>
+        <我要留言> <type>className</type> <value>bnt_blue_1</value> </我要留言>
+        <成功提示> <type>xpath</type> <value>//p</value> </成功提示>
+        <!-- <成功提示> <type>xpath</type> <value>//div[@class='boxCenterList RelaArticle']//p</value> </成功提示> -->
+    </留言板>
+</对象>

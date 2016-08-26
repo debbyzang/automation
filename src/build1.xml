@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="myAntProject" default="test" basedir="..">
+	<property name="lib" value="${basedir}\libs"/>
+	<property name="bin" value="${basedir}\bin"/>
+	<property name="src" value="${basedir}"/>
+	<property name="suite" value="${src}\TestSuite"/>
+	<target name="test">
+		<echo message="basedir ${basedir}" />
+		<echo message="lib ${lib}" />
+		<echo message="bin ${bin}" />
+		<echo message="src ${src}" />
+		<echo message="suite ${suite}" />
+		<echo message="testng ${lib}\testng-6.8.jar" />
+		
+	</target>
+	
+</project>

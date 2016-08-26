@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default suite" >
+<parameter name = "browserType"  value="chrome" />
+    <listeners>
+           <!--   <listener class-name="listener.ExecutionListener"/>-->
+        </listeners>
+    <test name="test004_r" preserve-order="true">
+		<classes>
+			<class name ="cases.Case007"/>
+		</classes>
+	</test> 
+</suite>
+
+

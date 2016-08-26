@@ -1,0 +1,9 @@
+<?xml  version="1.0" encoding="utf-8"?>
+<suite name="LoginTest">
+    <test name="chrome">
+    <parameter name="type" value="chrome"/>
+        <classes>
+            <class name="com.homework.Login"/>
+        </classes>
+    </test>
+</suite>

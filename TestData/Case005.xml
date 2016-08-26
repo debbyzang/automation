@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<data>
+    <common>
+        <登录地址>http://www.huicewang.com/ecshop/</登录地址>
+    </common>
+    
+    <Case005>
+        <用户名>debby</用户名>
+        <密码>123123</密码>
+    </Case005>
+    <Case005>
+        <用户名>zach</用户名>
+        <密码>123456</密码>
+    </Case005>
+</data>

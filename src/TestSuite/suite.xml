@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default suite"  parallel = "tests"  thread-count ="2">
+	<listeners>
+		<listener class-name="listener.ExecutionListener" />
+	</listeners>
+	<parameter name = "browserType"  value="chrome"/>
+	<test name="test1" preserve-order="true">
+		<parameter name = "desc"  value="开始"/>
+		<parameter name = "name"  value="debby"/>
+		<parameter name = "pwd"  value="123123"/>
+		<parameter name = "item"  value="耳机"/>
+		<parameter name = "item1"  value="耳机"/>
+		<parameter name = "name1"  value="debby"/>
+		<parameter name = "pwd1"  value="123123"/>
+		<classes>
+			 <class name ="cases.Case001"/>
+			<class name ="cases.Case002"/>
+		<!--	<class name ="cases.Case003"/>
+			<class name ="cases.Case004"/> 
+			<class name ="cases.OrderIdIsExist"/> -->
+		</classes>
+	</test>
+</suite>
+
+

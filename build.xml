@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<project name="myAntProject" default="run" basedir=".">
+    <property name="bin" value="${basedir}\bin"/>
+    <property name="src" value="${basedir}\src"/>
+    <property name="lib" value="${basedir}\libs"/>
+	 <!--<property name="debuglevel" value="lines,vars,source"/>-->
+	<!--  <property name="report" value="${basedir}\test-output"/>-->
+    <property name="suite" value="${src}\TestSuite"/>
+	<property name="suite.xml" value="testSuite.xml"/>
+    <!--Debby-->
+    <tstamp>
+    	<format property="nowstamp" pattern="yyyyMMdd-HHmmss" locale="en"/>
+    </tstamp>
+    	
+    <path id="classpath">
+        <pathelement location="."/>
+    	<pathelement location="${bin}" />
+    	<fileset dir="${lib}">
+    	   <include name="*.jar"/>
+        </fileset>
+    </path>
+    <path id="sourcepath">
+        <pathelement location="./src" />
+    </path>
+	<!--Debby-->
+    <target name="clean">
+    	<delete dir="${bin}" failonerror="No"/>
+    	<mkdir dir="${bin}"/>
+    </target>
+    <target name="build" depends="clean">
+        <javac srcdir="${src}" destdir="${bin}" sourcepathref="sourcepath" debug="on"  includeAntRuntime="false">
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
+
+    <taskdef resource="testngtasks" classpath="${lib}\testng-6.8.jar"/>
+    <target name="run" depends="build">
+        <testng classpathref="classpath" outputdir="${report}/TestNG/${nowstamp}"  >
+            <xmlfileset dir="${suite}" includes="${suite.xml}" />
+        </testng>
+    </target>
+	
+</project>
